@@ -168,10 +168,10 @@ hayatına destek olmak ve bu süreci kolaylaştırmaktır.
 ## Bireysel Çalışma : 
 HÜMEYRA ÇİMEN  [![PDF](https://img.shields.io/badge/View-PDF-red)](https://github.com/hmyrcmn/KalemDostlari-1/blob/main/Bireysel%C3%87al%C4%B1%C5%9FmaVizeH%C3%BCmeyra%C3%87imen19360859053.pdf)
 
-SELİN RÜMEYSA KAYA [![PDF](https://img.shields.io/badge/View-PDF-red)]https://github.com/Wahib-eng/KalemDostlari/blob/main/Selinr%C3%BCmeysakaya_20360859025_yaz%C4%B1l%C4%B1mm%C3%BChbireysel%C3%A7al%C4%B1%C5%9Fma%20(1).pdf
+SELİN RÜMEYSA KAYA [![PDF](https://img.shields.io/badge/View-PDF-red)](https://github.com/Wahib-eng/KalemDostlari/blob/main/Selinr%C3%BCmeysakaya_20360859025_yaz%C4%B1l%C4%B1mm%C3%BChbireysel%C3%A7al%C4%B1%C5%9Fma%20(1).pdf)
 
 HİLAL SARAÇOĞLU [![PDF](https://img.shields.io/badge/View-PDF-red)](https://github.com/HilalSaracoglu/KalemDostlari_Proje/blob/main/H%C4%B0LAL_SARA%C3%87O%C4%9ELU_21360859147%20(1).pdf)
 
-WAHIB MOQBEL [![PDF](https://img.shields.io/badge/View-PDF-red)]https://github.com/Wahib-eng/KalemDostlari/blob/main/6-Bireysel_%C3%A7al%C4%B1%C5%9Fma_Wahib_MOQBEL.pdf
+WAHIB MOQBEL [![PDF](https://img.shields.io/badge/View-PDF-red)](https://github.com/Wahib-eng/KalemDostlari/blob/main/6-Bireysel_%C3%A7al%C4%B1%C5%9Fma_Wahib_MOQBEL.pdf)
 
 
