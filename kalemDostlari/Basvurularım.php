@@ -174,9 +174,9 @@ include_once "connection.php";
       <div class="p-3 rounded border border-dark shadow-lg" style="background-color: rgb(196,165,134); height: 600px ;margin-left: 10px; box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.5); border-width: 13px; border-radius: 20px;">   
         <!-- takvim -->     
 
-        <div class="container" style:" height: 800px ; margin-left: 50px;">
+        <div class="container" style="height: 800px; margin-left: 50px;">
       		<div class="row">
-      			<div class="col-md-12" style:"background-color:rgb(222,204,187);">
+      			<div class="col-md-12" style="background-color:rgb(222,204,187);">
       				<div id="calendar"></div>
       			</div>
       		</div>
