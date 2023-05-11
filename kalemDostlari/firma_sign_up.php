@@ -142,23 +142,51 @@ include_once "connection.php";
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <div>
-  <div class="tableOuter container p-3 rounded-lg border border-dark mx-auto " style="margin:10px; margin:10px; background-color:rgb(211,189,166); border-color: white; color: black;">
+  <div class="col-4 tableOuter container  rounded-lg border border-dark text-center " style="margin:10px; margin:10px; background-color:rgb(211,189,166); border-color: white; color: black;">
     <h1 style="margin:20px;">Kayıt Ol</h1>
-    <form action="islem.php" method="POST">
-    <div class="user" style="margin:10px;">
-            <input type="text" id="kullanici_adsoyad" name="kullanici_adsoyad" placeholder="Ad Soyad">
-</div>
-        <div class="user" style="margin:10px;">
-            <input type="text" id="kullanici_tc" name="kullanici_tc" placeholder="Tc Kimlik No">
-</div>
-<div class="pass" style="margin:10px; color: white;">
-    <input type="password" id="kullanici_password" name="kullanici_password" placeholder="Şifre" style="color: white;">
-</div>
-<button  class=" rounded-pill  rounded border border-dark shadow-lg"type="submit" class="submit" value="submit" id="kullanicikaydet" name="submit" style="margin:10px; background-color:rgb(211,189,166); border-color: black; color: black;">Kayıt ol</button>
-<br>
- <button class="btn btn-primary rounded-pill  rounded border border-dark shadow-lg" style="background-color: #ff0000;margin:10px;">E-Devlet  ile Kayıt Ol</button>
+    <form action="sign_up_do.php" method="POST" class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+                <div class="row d-flex rounded justify-content-end align-items-center " >
 
-</form>
+                    <div class="row " >
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end  text-right">
+                            NAME  &nbsp &nbsp &nbsp &nbsp<input type="text" name="name" placeholder="Enter Name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            SURNAME &nbsp <input type="text" name="surname" placeholder="Enter Surname">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            Tell &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="tell" placeholder="Enter Phone Num">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            Adress &nbsp &nbsp &nbsp &nbsp<input type="text" name="adress" placeholder="Enter Adress">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            Username &nbsp &nbsp <input type="text" name="username" placeholder="Enter username">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 text-right justify-content-end " >
+                            PASSWORD<input type="password" name="password" placeholder="Enter Password ">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <?php
+                            echo "<a href='index.php'><button type='submit'class='btn p-2 my-2 btn-primary col-6'> SIGN UP</button></a>";
+                            //echo "<a href='index.php'><img width=100 height=200 src='https://thumbs.dreamstime.com/b/sign-up-now-white-background-sticker-stamp-187174457.jpg'></a>";
+                    ?>
+                    </div>
+                </div>
+            </form>
 <button type="submit" class="submit rounded border border-dark shadow-lg" name="kayit" id="kayit" onclick="mainPage()">Geri Dön</button>
 </div>
     <p>Hesabım Var  </p>
