@@ -41,72 +41,83 @@
         }
     </style>
 </head>
-<body style="background-color:rgb(221, 199, 177)";>
 
- <div>
-        <nav class="navbar navbar-expand-lg " >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo"  width="200" height="200"> </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
-                  </li>
-                 
-                 
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Elektronik Eşya Destiği
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Telefon</a></li>
-                      <li><a class="dropdown-item" href="#">Laptop</a></li>
-                      <li><a class="dropdown-item" href="#">Tablet</a></li>
-                    </ul>
-                   
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Burs Desteği
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item " href="#">Burs başvuruları görüntüle</a></li>
-                        <li><a class="dropdown-item" href="#">Burs sonuçları görüntüle</a></li>
-                        
-                      </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Mentorluk Desteği
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Danışmanla görüş</a></li>
-                        <li><a class="dropdown-item" href="#">birşeker </a></li>
-                        <li><a class="dropdown-item" href="#">birşeker</a></li>
-                      </ul>
-                  </li>
-                  
-                  <nav class="navbar ">
-                    <div class="container-fluid">
-                      <form class="d-flex" role="search">&nbsp&nbsp
-                        <button class="btn" style=" border-color: black; color: black;"><a class="nav-link" href="#" onclick="iletisim()">İletişim</a></button> &nbsp&nbsp
-                        <input class="form-control me-2" type="search" placeholder="Arama" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"> Arama  </button>&nbsp&nbsp
-                        <button class="btn "style= "border-color: black; color: black; ">Hesabım</button>
-                      </form>
+<body style="background-color: rgb(221, 199, 177)">
+ <div class="container-md">
+   
+     <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="200"
+            height="200"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a></li>
+
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false"> Destekler </a>
+              <ul class="dropdown-menu" id="dash">
+                <li> <a class="dropdown-item" href="elektronik.php"> Elektronik Eşya Desteği </a> </li>
+
+                <li><a class="dropdown-item" href="burs.php">Burs Desteği </a></li>
+                <li><a class="dropdown-item" href="mentorluk.php">Mentorluk Desteği </a></li>
+              </ul>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="hakkimizde.php"> Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="nasılCalısır.php">Nasıl çalışır ?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Basvurularım.php">başvurularım deneme ?</a>
+            </li>
+
+
+
+            <nav class="navbar ">
+              <div class="container-fluid">
+                <form class="d-flex" role="search">&nbsp&nbsp
+                  <button class="btn rounded" style=" border-color: black; color: black;"><a class="nav-link" href="#"
+                      onclick="iletisim()">İletişim</a> </button> &nbsp&nbsp
+
+                  <div class="col-4 form-group">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Arama">
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fa fa-search"></i>
+                          <svg viewBox="0 0 512 512" width="30" title="search">
+                            <path
+                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                          </svg>
+                        </span>
+                      </div>
                     </div>
-                  </nav>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </div>
+                  </div>
+                  <button class="col-2 btn rounded " style="border-color: black; color: black; "
+                    onclick="sign_in()">Giris yap
+                    <svg viewBox="0 0 512 512" width="30" title="sign-in-alt">
+                      <path
+                        d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z" />
+                    </svg>
+                  </button>
+                </form>
 
+              </div>
+            </nav>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <br><br>
+</div>
 <header><br><br>
-    <h2 >Kalem Dostlari</h2><br><br>
+    <h1 >Kalem Dostlari</h1><br><br>
 </header>
 
 <div class="row">
@@ -192,7 +203,7 @@
           <div class="col-12">
             <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
               <ul class="list-unstyled footer-menu mr-auto">
-                <li><a href="index.php">Anasayfa</a></li>
+                <li><a href="index.html">Anasayfa</a></li>
                 <li><a href="#">Elektronik Eşya Desteği</a></li>
                 <li><a href="#">Burs Desteği</a></li>
                 <li><a href="#">Mentorluk Desteği</a></li>
