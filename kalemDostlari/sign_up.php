@@ -20,6 +20,11 @@ include_once "connection.php";
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 
   <style>
+    .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
     .navbar {
       background-color:rgb(221, 199, 177);
     }
@@ -35,7 +40,6 @@ include_once "connection.php";
     background-color: white;
     background-image: url("https://r.resimlink.com/bxnO4.png");
 }
-
   </style>
 </head>
 
@@ -142,23 +146,55 @@ include_once "connection.php";
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <div>
-  <div class="tableOuter container p-3 rounded-lg border border-dark mx-auto " style="margin:10px; margin:10px; background-color:rgb(211,189,166); border-color: white; color: black;">
+<div class="col-4 tableOuter container  rounded-lg border border-dark text-center " style="margin:10px; margin:10px; background-color:rgb(211,189,166); border-color: white; color: black;">
     <h1 style="margin:20px;">Kayıt Ol</h1>
-    <form action="islem.php" method="POST">
-    <div class="user" style="margin:10px;">
-            <input type="text" id="kullanici_adsoyad" name="kullanici_adsoyad" placeholder="Ad Soyad">
-</div>
-        <div class="user" style="margin:10px;">
-            <input type="text" id="kullanici_tc" name="kullanici_tc" placeholder="Tc Kimlik No">
-</div>
-<div class="pass" style="margin:10px; color: white;">
-    <input type="password" id="kullanici_password" name="kullanici_password" placeholder="Şifre" style="color: white;">
-</div>
-<button  class=" rounded-pill  rounded border border-dark shadow-lg"type="submit" class="submit" value="submit" id="kullanicikaydet" name="submit" style="margin:10px; background-color:rgb(211,189,166); border-color: black; color: black;">Kayıt ol</button>
-<br>
- <button class="btn btn-primary rounded-pill  rounded border border-dark shadow-lg" style="background-color: #ff0000;margin:10px;">E-Devlet  ile Kayıt Ol</button>
-
-</form>
+    <form action="sign_up_do.php" method="POST" class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+                <div class="row d-flex rounded justify-content-end align-items-center " >
+                  <div class="row form-container">
+                    <div class="row " >
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end  text-right">
+                            <input type="text" name="name" placeholder="İsim">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            <input type="text" name="surname" placeholder="Soy İsim">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            <input type="text" name="age" placeholder="Yaşınızı Giriniz">
+                            </div> 
+                          <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            <input type="text" name="departman" placeholder="Departman Giriniz">
+                            </div> 
+                            <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            <input type="text" name="school" placeholder="Okul Giriniz">
+                            </div> 
+                            <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                            <input type="text" name="classLevel" placeholder="Sınıf Giriniz">
+                            </div> 
+                        
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 justify-content-end text-right">
+                             <input type="text" name="username" placeholder="Kullanıcı Adı Giriniz">
+                            </div> 
+                        </div>
+                        <div class="row">
+                            <div class="col-8 p-2 my-2 text-right justify-content-end " >
+                            <input type="password" name="passwords" placeholder="Şifre Giriniz ">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
 <button type="submit" class="submit rounded border border-dark shadow-lg" name="kayit" id="kayit" onclick="mainPage()">Geri Dön</button>
 </div>
     <p>Hesabım Var  </p>

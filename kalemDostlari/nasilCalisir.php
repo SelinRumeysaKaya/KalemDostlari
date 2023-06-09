@@ -1,3 +1,6 @@
+<?php
+include_once "connection.php";
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -6,9 +9,12 @@
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
   <!-- CSS only -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
@@ -22,13 +28,28 @@
     .kalem-dostlari {
       height: 50vh;
       padding-left: 20px;
-    }
+        }
+    body {
+    
+}
+    .baslık {
+  position: relative;
+  top: 150px;
+  left: 15px;
+}
+
+  #resim1, #resim2 {
+			display: none;
+			margin: 50px auto;
+			max-width: 100%;
+		}
+
   </style>
 </head>
 
-<body style="background-color: rgb(221, 199, 177)">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container-fluid ">
       <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
           height="150"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -106,121 +127,84 @@
     </div>
   </nav>
 
-  <div class="container text-center">
-   <br><br><br> <h1> Hakkımızda   </h1>
-  </div><br><br><br>
-  <div class ="container-md"> 
-    <p class="" >
-      Vizyonumuz, her öğrencinin eğitimine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır. Bu yüzden, web sitemizde sadece staj eğitimi desteği değil, aynı zamanda burs ve ödüllere de yer veriyoruz. Bu sayede, öğrencilerin eğitimlerini tamamlamalarına ve geleceklerine daha güçlü bir şekilde adım atmalarına yardımcı oluyoruz.
-
-Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak için oluşturulmuş bir platformdur. Vizyonumuz ise öğrencilerin eğitimlerine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır
-    </p>
-    
+  <div class="container-fluid"  style="background-color: rgb(221, 199, 177)">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1 class="text-center baslık">Kalem Dostları Nasıl Çalışır ?</h1>
+			</div>
+		</div>
+		
+<div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://r.resimlink.com/_FUXh.png" style="transform: scale(0.5);" class="d-block w-100">
+        
+      </div>
+      
+      <div class="carousel-item">
+        <img src="https://r.resimlink.com/UFu94s1.png" style="transform: scale(0.5);" class="d-block w-100">
+        
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
+
+
+
+
+
   
+<!-- Bootstrap JS dosyalarını ekleyin -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper-core.min.js"
+		integrity="sha384-ILQSRoHm6gBdC7zKmWbqXmzLflYb1DZL/j56jJG2itdz/hnFyGB2NIOx8Wf25XKv"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"
+		integrity="sha384-cCfSABaB0V+929Jgj1Kct5UCxR9ny+oC75dOfnZt+u1tJq3SQdwF6PyIjK+0CKhL"
+		crossorigin="anonymous"></script>
+	
+	<script>
+		$(window).on('scroll', function() {
+			var scrollTop = $(this).scrollTop();
+			var resim1Top = $('#resim1').offset().top;
+			var resim2Top = $('#resim2').offset().top;
+			
+			if (scrollTop >= resim2Top) {
+				$('#resim1').show();
+				$('#resim2').hide();
+			} else {
+				$('#resim1').hide();
+				$('#resim2').show();
+			}
+		});
+	</script>
+
+<script> 
+  function nasılCalısır() {
+    window.location.href = "nasılCalısır.php";
+  }
+</script>
+
+
   
-
-  
-
-
-
-
-
-
-
-
-
-  <!-- Bootstrap JS ve jQuery -->
-  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-
-
-  <script>
-    function sign_up() {
-      window.location.href = "sign_up.php";
-    }
-    function sign_in() {
-      window.location.href = "sign_in.php";
-    }
-    function iletisim() {
-      window.location.href = "iletisim.php";
-    }
-
-
-  </script>
-
-
-   <br><br>
-  <footer class="footer-32892 pb-0">
-    <div class="site-section">
-    <div class="container">
-    <div class="row">
-    <div class="col-md pr-md-5 mb-4 mb-md-0">
-    <h3>HAKKIMIZDA</h3>
-    <p class="mb-4">Websitemiz depremde etkilenen ve zor durumda kalan öğrencilerin ihtiyaçlarına yönelik
-      çeşitli yardımlar içeren bir web sitesidir.</p>
-    <ul class="list-unstyled quick-info mb-4">
-    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +90 555 555 55 55 </a></li>
-    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> <span class="__cf_email__" data-cfemail="d3babdb5bc93b4beb2babffdb0bcbe">[email&#160;protected]</span></a></li>
-    </ul>
-    <form action="#" class="subscribe">
-    <input type="text" class="form-control" placeholder="Enter your e-mail">
-    <input type="submit" class="btn btn-submit" value="Send">
-    </form>
-    </div>
-    <div class="col-md mb-4 mb-md-0">
-    <h3>HEDEFIMIZ</h3>
-    <ul class="list-unstyled tweets">
-    <li class="d-flex">
-    <div class="mr-4"><span class="icon icon-twitter"></span></div>
-    <div>Websitemizde depremden etkilenen öğrencilere akademik burs, elektronik eşya desteği,
-      iş ve staj imkânı ve online mentörlük görüşmeleri sunan bir platformdur.
-    </div>
-    </li>
-    <li class="d-flex">
-    <div class="mr-4"></div>
-    <div>Bu platformda, öğrencilerin ihtiyaçlarını karşılamak için firmaların ve yetkili
-      kişilerin daha kolay bir şekilde ulaşmasını sağlamayı amaçlıyoruz.</div>
-    </li>
-    
-    </ul>
-    </div>
-    <div class="col-md-3 mb-4 mb-md-0">
-    <div class="row gallery">
-    <div class="col-6">
-    
-    </div>
-    </div>
-    </div>
-    <div class="col-12">
-    <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
-    <ul class="list-unstyled footer-menu mr-auto">
-    <li><a href="index.html">Anasayfa</a></li>
-    <li><a href="#">Elektronik Eşya Desteği</a></li>
-    <li><a href="#">Burs Desteği</a></li>
-      <li><a href="#">Mentorluk Desteği</a></li>
-    <li><a href="#">Nasıl çalışır ? </a></li>
-    <li><a href="iletisim.php">İletişim</a></li>
-    </ul>
-    <div class="site-logo-wrap ml-auto">
-    
-    <a href="#" class="site-logo">
-    Kalem Dostları 
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </footer>
-
-
-
 </body>
+
+  
 
 </html>

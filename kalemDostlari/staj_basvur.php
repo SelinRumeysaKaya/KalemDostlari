@@ -1,8 +1,11 @@
+<?php
+include_once "connection.php";
+?>
 <!DOCTYPE HTML>
 <html>
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
   <!-- CSS only -->
@@ -27,6 +30,7 @@
 </head>
 
 <body style="background-color: rgb(221, 199, 177)">
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
@@ -62,11 +66,12 @@
           <li class="nav-item">
             <a class="nav-link" href="basvurularim.php">Başvurularım</a>
           </li>
+           
           <li class="nav-item">
             <a class="nav-link" href="iletisim.php">İletişim</a>
           </li>
         </ul>
-        <form  action="firma_sign_up_do.php" class="d-flex">
+        <form class="d-flex">
           <div class="col-6 form-group">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Arama">
@@ -106,118 +111,139 @@
     </div>
   </nav>
 
-  <div class="container text-center">
-   <br><br><br> <h1> Hakkımızda   </h1>
-  </div><br><br><br>
-  <div class ="container-md"> 
-    <p class="" >
-      Vizyonumuz, her öğrencinin eğitimine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır. Bu yüzden, web sitemizde sadece staj eğitimi desteği değil, aynı zamanda burs ve ödüllere de yer veriyoruz. Bu sayede, öğrencilerin eğitimlerini tamamlamalarına ve geleceklerine daha güçlü bir şekilde adım atmalarına yardımcı oluyoruz.
+  
 
-Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak için oluşturulmuş bir platformdur. Vizyonumuz ise öğrencilerin eğitimlerine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır
-    </p>
-    
+ <div class="container">
+    <div class="row">
+      <div class="col text-center">
+         <br><br><br>
+        
+          <br><br><br>
+        <div class="row">
+  <h1 style="margin: 20px; background-">Staj Başvuru</h1>
+
+  <form action="staj_teklifi_ver_do.php" method="POST" class="form-control" style="margin: 10px;">
+        <div class="row justify-content-center align-items-center" style="margin: 10px;">
+            <div class="col-md-6" style="margin: 10px;">
+                <input type="text" name="name" placeholder="İsim" class="form-control">
+            </div>
+
+            <div class="col-md-6" style="margin: 10px;">
+                <input type="text" name="bolum" placeholder="Bölüm" class="form-control">
+            </div>
+
+            <div class="col-md-6" style="margin: 10px;">
+                <input type="text" name="sınıf" placeholder="Sınıf" class="form-control">
+            </div>
+
+
+            <div class="col-md-12" style="margin: 10px;">
+                <button class="rounded-pill border border-dark shadow-lg" type="submit"  style="background-color: rgb(211,189, 166); border-color: black; color: black; margin: 10px;">
+                Staj Oluştur</button>
+            </div>
+
+        </div>
+    </form>
+    </div>
   </div>
+</div>
   
+</div>
+
+
+
+
   
-
-  
-
-
-
-
-
-
-
-
-
-  <!-- Bootstrap JS ve jQuery -->
-  <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
 
 
   <script>
     function sign_up() {
       window.location.href = "sign_up.php";
     }
-    function sign_in() {
-      window.location.href = "sign_in.php";
-    }
+
     function iletisim() {
       window.location.href = "iletisim.php";
+    }
+    function girisYap() {
+      window.location.href = "sign_in.php";
+    }
+    function kayit() {
+      window.location.href = "Kayit.php";
+
     }
 
 
   </script>
 
 
-   <br><br>
+  <br><br>
   <footer class="footer-32892 pb-0">
     <div class="site-section">
-    <div class="container">
-    <div class="row">
-    <div class="col-md pr-md-5 mb-4 mb-md-0">
-    <h3>HAKKIMIZDA</h3>
-    <p class="mb-4">Websitemiz depremde etkilenen ve zor durumda kalan öğrencilerin ihtiyaçlarına yönelik
-      çeşitli yardımlar içeren bir web sitesidir.</p>
-    <ul class="list-unstyled quick-info mb-4">
-    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +90 555 555 55 55 </a></li>
-    <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> <span class="__cf_email__" data-cfemail="d3babdb5bc93b4beb2babffdb0bcbe">[email&#160;protected]</span></a></li>
-    </ul>
-    <form action="#" class="subscribe">
-    <input type="text" class="form-control" placeholder="Enter your e-mail">
-    <input type="submit" class="btn btn-submit" value="Send">
-    </form>
+      <div class="container">
+        <div class="row">
+          <div class="col-md pr-md-5 mb-4 mb-md-0">
+            <h3>HAKKIMIZDA</h3>
+            <p class="mb-4">Websitemiz depremde etkilenen ve zor durumda kalan öğrencilerin ihtiyaçlarına yönelik
+              çeşitli yardımlar içeren bir web sitesidir.</p>
+            <ul class="list-unstyled quick-info mb-4">
+              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-phone"></span> +90 555 555
+                  55 55 </a></li>
+              <li><a href="#" class="d-flex align-items-center"><span class="icon mr-3 icon-envelope"></span> <span
+                    class="__cf_email__" data-cfemail="d3babdb5bc93b4beb2babffdb0bcbe">[email&#160;protected]</span></a>
+              </li>
+            </ul>
+            <form action="#" class="subscribe">
+              <input type="text" class="form-control" placeholder="Enter your e-mail">
+              <input type="submit" class="btn btn-submit" value="Send">
+            </form>
+          </div>
+          <div class="col-md mb-4 mb-md-0">
+            <h3>HEDEFIMIZ</h3>
+            <ul class="list-unstyled tweets">
+              <li class="d-flex">
+                <div class="mr-4"><span class="icon icon-twitter"></span></div>
+                <div>Websitemizde depremden etkilenen öğrencilere akademik burs, elektronik eşya desteği,
+                  iş ve staj imkânı ve online mentörlük görüşmeleri sunan bir platformdur.
+                </div>
+              </li>
+              <li class="d-flex">
+                <div class="mr-4"></div>
+                <div>Bu platformda, öğrencilerin ihtiyaçlarını karşılamak için firmaların ve yetkili
+                  kişilerin daha kolay bir şekilde ulaşmasını sağlamayı amaçlıyoruz.</div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <div class="row gallery">
+              <div class="col-6">
+
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
+              <ul class="list-unstyled footer-menu mr-auto">
+                <li><a href="index.php">Anasayfa</a></li>
+                <li><a href="#">Elektronik Eşya Desteği</a></li>
+                <li><a href="#">Burs Desteği</a></li>
+                <li><a href="#">Mentorluk Desteği</a></li>
+                <li><a href="nasilCalisir.php">Nasıl çalışır ? </a></li>
+                <li><a href="iletisim.php">İletişim</a></li>
+              </ul>
+              <div class="site-logo-wrap ml-auto">
+
+                <a href="index.php">
+                  Kalem Dostları
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md mb-4 mb-md-0">
-    <h3>HEDEFIMIZ</h3>
-    <ul class="list-unstyled tweets">
-    <li class="d-flex">
-    <div class="mr-4"><span class="icon icon-twitter"></span></div>
-    <div>Websitemizde depremden etkilenen öğrencilere akademik burs, elektronik eşya desteği,
-      iş ve staj imkânı ve online mentörlük görüşmeleri sunan bir platformdur.
-    </div>
-    </li>
-    <li class="d-flex">
-    <div class="mr-4"></div>
-    <div>Bu platformda, öğrencilerin ihtiyaçlarını karşılamak için firmaların ve yetkili
-      kişilerin daha kolay bir şekilde ulaşmasını sağlamayı amaçlıyoruz.</div>
-    </li>
-    
-    </ul>
-    </div>
-    <div class="col-md-3 mb-4 mb-md-0">
-    <div class="row gallery">
-    <div class="col-6">
-    
-    </div>
-    </div>
-    </div>
-    <div class="col-12">
-    <div class="py-5 footer-menu-wrap d-md-flex align-items-center">
-    <ul class="list-unstyled footer-menu mr-auto">
-    <li><a href="index.html">Anasayfa</a></li>
-    <li><a href="#">Elektronik Eşya Desteği</a></li>
-    <li><a href="#">Burs Desteği</a></li>
-      <li><a href="#">Mentorluk Desteği</a></li>
-    <li><a href="#">Nasıl çalışır ? </a></li>
-    <li><a href="iletisim.php">İletişim</a></li>
-    </ul>
-    <div class="site-logo-wrap ml-auto">
-    
-    <a href="#" class="site-logo">
-    Kalem Dostları 
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </footer>
+  </footer>
+
 
 
 
