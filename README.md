@@ -5,8 +5,8 @@ Kalem dostları, aylar öncesinde yaşamış olduğumuz deprem felaketi gibi bir
 Öğrenciler web sitesi aracılığıyla iş, staj, mentörlük ve elektronik eşya desteği gibi birçok konuda firmalarla ve bağışçılarla hızlı bir şekilde iletişim kurup destek alabileceklerdir.
 
 Projemizi incelemek ve geri dönüşlerinizi belirtmek isterseniz aşağıda bulunan github adresinden inceleyebilirsiniz.
-[PROJE SATNITIM DEMO](https://www.youtube.com/watch?v=CJY_IuMW8mw&t=14s)
-[PROJE TANITIM ](https://www.youtube.com/watch?v=fIQah5iDQCI)
+<br><br>[PROJE SATNITIM DEMO](https://www.youtube.com/watch?v=CJY_IuMW8mw&t=14s)<br><br><br>
+[PROJE TANITIM ](https://www.youtube.com/watch?v=fIQah5iDQCI)<br><br>
 
 Merhaba,
 
