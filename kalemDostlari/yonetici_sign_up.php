@@ -1,8 +1,13 @@
+<?php
+include_once "connection.php";
+?>
 <!DOCTYPE HTML>
 <html>
 
+
 <head>
-  <meta charset="UTF-8">
+ 
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
   <!-- CSS only -->
@@ -16,21 +21,30 @@
 
   <style>
     .navbar {
-      background-color: rgb(221, 199, 177);
+      background-color:rgb(221, 199, 177);
     }
-
     .kalem-dostlari {
       height: 50vh;
       padding-left: 20px;
     }
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'helvetica', sans-serif;
+    text-align: center;
+    background-color: white;
+    background-image: url("https://r.resimlink.com/bxnO4.png");
+}
+
   </style>
 </head>
 
-<body style="background-color: rgb(221, 199, 177)">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body style="background-color: rgb(221, 199, 177)"  >
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
-          height="150"></a>
+      <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="50"
+          height="50"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +52,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -57,16 +71,16 @@
             <a class="nav-link" href="hakkimizde.php">Hakkımızda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="nasilCalisir.php">Nasıl Çalışır?</a>
+            <a class="nav-link" href="nasılCalısır.php">Nasıl Çalışır?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="basvurularim.php">Başvurularım</a>
+            <a class="nav-link" href="Basvurularım.php">Başvurularım</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="iletisim.php">İletişim</a>
           </li>
         </ul>
-        <form  action="firma_sign_up_do.php" class="d-flex">
+        <form class="d-flex">
           <div class="col-6 form-group">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Arama">
@@ -75,10 +89,19 @@
                   <i class="fa fa-search"></i>
                   <button class="btn btn-outline-success" type="submit"><svg viewBox="0 0 512 512" width="30"
                       title="search">
-                      <path
-                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                    </svg>
-                  </button>
+                      <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg></button>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -92,13 +115,15 @@
 
 
           <button class="btn btn-outline-success  rounded" style="margin:10px;border-color: black; color: black;"><a
-              class="nav-link" href="#" onclick="girisYap()"> Giris yap
+              class="nav-link" href="sign_in.php" onclick="girisYap()"> Giris yap
               <svg viewBox="0 0 512 512" width="30" title="sign-in-alt">
                 <path
                   d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z" />
               </svg>
-            </a>
-          </button>
+            </a> </button>
+
+
+          
 
 
         </form>
@@ -106,29 +131,58 @@
     </div>
   </nav>
 
-  <div class="container text-center">
-   <br><br><br> <h1> Hakkımızda   </h1>
-  </div><br><br><br>
-  <div class ="container-md"> 
-    <p class="" >
-      Vizyonumuz, her öğrencinin eğitimine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır. Bu yüzden, web sitemizde sadece staj eğitimi desteği değil, aynı zamanda burs ve ödüllere de yer veriyoruz. Bu sayede, öğrencilerin eğitimlerini tamamlamalarına ve geleceklerine daha güçlü bir şekilde adım atmalarına yardımcı oluyoruz.
+ <div style="margin: 10px; background-color: rgb(211, 189, 166); border-color: white; color: black;">
+  <h1 style="margin: 20px;">Kayıt Ol</h1>
+  <div class="row col-8 container d-flex justify-content-center">
+    <form action="yonetici_sign_up_do.php" method="POST" style="margin: 10px;">
+      <div class="row justify-content-end align-items-center" style="margin: 10px;">
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <input type="text" name="username" placeholder="Kullanıcı Adı Giriniz" class="form-control">
+        </div>
+      </div>
+      <div class="row justify-content-end align-items-center" style="margin: 10px;">
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <input type="password" name="passwords" placeholder="Şifre Giriniz" class="form-control">
+        </div>
+      </div>
+      <div class="row justify-content-end align-items-center" style="margin: 10px;">
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <input type="text" name="name" placeholder="İsim" class="form-control">
+        </div>
+      </div>
+      <div class="row justify-content-end align-items-center" style="margin: 10px;">
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <input type="text" name="surname" placeholder="Soy İsim" class="form-control">
+        </div>
+      </div>
+      <div class="row justify-content-end align-items-center" style="margin: 10px;">
+        <div class="col-md-6" style="margin-bottom: 10px;">
+          <input type="text" name="status" placeholder="Statü" class="form-control">
+        </div>
+      </div>
 
-Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak için oluşturulmuş bir platformdur. Vizyonumuz ise öğrencilerin eğitimlerine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır
-    </p>
-    
+        <div class="col-12 text-center justify-content-center" style="margin: 10px;">
+        <div style="margin-bottom: 10px;">
+        <button type="submit" class="btn btn-primary rounded-pill" style="background-color: rgb(211, 189, 166); border-color: black; color: black; display: block; margin: 0 auto;">Kayıt ol</button>
+        </div>
+        </div>
+
+
+      
+    </form> 
   </div>
-  
-  
+</div>
+
+<hr style="border: 1px solid black; margin: 10px;">
+
+<div class="row justify-content-center align-items-center" style="margin: 10px;">
+  <div class=" justify-content-center col-md-2 text-center">
+    <p>Hesabım Var</p>
+    <button type="button" class="justify-content-center btn btn-primary  rounded-pill" onclick="sign_in()" style="background-color: rgb(211, 189, 166); border-color: black; color: black; display: block; margin: 0 auto;">Giriş Yap</button>
+  </div>
+</div>
 
   
-
-
-
-
-
-
-
-
 
   <!-- Bootstrap JS ve jQuery -->
   <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
@@ -136,23 +190,20 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+<div>
 
-
-
-  <script>
-    function sign_up() {
-      window.location.href = "sign_up.php";
-    }
-    function sign_in() {
+<script>
+  function sign_in() {
       window.location.href = "sign_in.php";
     }
-    function iletisim() {
-      window.location.href = "iletisim.php";
-    }
-
-
-  </script>
-
+    function mainPage(){
+       window.location.href = ".php";
+                                          
+   } 
+  function redirectToKayit() {
+    window.location.href = "Kayit.php";
+  }
+</script>
 
    <br><br>
   <footer class="footer-32892 pb-0">
@@ -208,7 +259,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </ul>
     <div class="site-logo-wrap ml-auto">
     
-    <a href="#" class="site-logo">
+    <a href="index.php" class="site-logo">
     Kalem Dostları 
     </a>
     </div>
@@ -218,6 +269,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </div>
     </div>
     </footer>
+
 
 
 

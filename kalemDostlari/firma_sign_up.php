@@ -1,8 +1,13 @@
+<?php
+include_once "connection.php";
+?>
 <!DOCTYPE HTML>
 <html>
 
+
 <head>
-  <meta charset="UTF-8">
+ 
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
   <!-- CSS only -->
@@ -16,17 +21,29 @@
 
   <style>
     .navbar {
-      background-color: rgb(221, 199, 177);
+      background-color:rgb(221, 199, 177);
     }
-
     .kalem-dostlari {
       height: 50vh;
       padding-left: 20px;
     }
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'helvetica', sans-serif;
+    text-align: center;
+    background-color: white;
+    background-image: url("https://r.resimlink.com/bxnO4.png");
+}
+
   </style>
 </head>
 
+<body style="background-color: rgb(221, 199, 177)"  >
+    
+
 <body style="background-color: rgb(221, 199, 177)">
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
@@ -106,29 +123,10 @@
     </div>
   </nav>
 
-  <div class="container text-center">
-   <br><br><br> <h1> Hakkımızda   </h1>
-  </div><br><br><br>
-  <div class ="container-md"> 
-    <p class="" >
-      Vizyonumuz, her öğrencinin eğitimine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır. Bu yüzden, web sitemizde sadece staj eğitimi desteği değil, aynı zamanda burs ve ödüllere de yer veriyoruz. Bu sayede, öğrencilerin eğitimlerini tamamlamalarına ve geleceklerine daha güçlü bir şekilde adım atmalarına yardımcı oluyoruz.
-
-Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak için oluşturulmuş bir platformdur. Vizyonumuz ise öğrencilerin eğitimlerine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır
-    </p>
-    
-  </div>
-  
-  
 
   
-
-
-
-
-
-
-
-
+  
+  
 
   <!-- Bootstrap JS ve jQuery -->
   <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
@@ -136,23 +134,70 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+  
 
+ <div class="container">
+    <div class="row">
+      <div class="col text-center">
+         <br><br><br>
+        <div><h1>KALEM DOSTLARI</h1></div>
+          <br><br><br>
+        <div class="row">
+  <h1 style="margin: 20px;">Kayıt Ol</h1>
 
+  <form action="firma_sign_up_do.php" method="POST" class="form-control" style="margin: 10px;">
+    <div class="row justify-content-center align-items-center" style="margin: 10px;">
+      <div class="col-md-6" style="margin: 10px;">
+        
+        <input type="text" name="name" placeholder="İsim" class="form-control">
+      </div>
 
-  <script>
-    function sign_up() {
-      window.location.href = "sign_up.php";
-    }
-    function sign_in() {
+      <div class="col-md-6" style="margin: 10px;">
+       
+        <input type="password" name="passwords" placeholder="Şifre Giriniz" class="form-control">
+      </div>
+
+      <div class="col-md-6" style="margin: 10px;">
+        <input type="text" name="location" placeholder="Location" class="form-control">
+      </div>
+
+      <div class="col-md-6" style="margin: 10px;">
+        <input type="text" name="sector" placeholder="Sektörünüz" class="form-control">
+      </div>
+
+      <div class="col-md-6" style="margin: 10px;">
+        <input type="text" name="employeNum" placeholder="Departman Giriniz" class="form-control">
+      </div>
+
+      <div class="col-md-6" style="margin: 10px;">
+        <input type="text" name="stajKonID" placeholder="Departman Giriniz" class="form-control">
+      </div>
+
+      <div class="col-md-12" style="margin: 10px;">
+        <button class="rounded-pill border border-dark shadow-lg" type="submit" value="submit" id="kullanicikaydet" name="submit" style="background-color: rgb(211,             189, 166); border-color: black; color: black; margin: 10px;">Kayıt ol</button>
+        <button type="submit" class="rounded border border-dark shadow-lg" name="kayit" id="kayit" style="background-color: rgb(211, 189, 166); border-color: black;                color: black; margin: 10px;">Geri Dön</button>
+        <button type="button" class="btn btn-primary mx-2 rounded-pill" onclick="sign_in()" style="background-color: rgb(211, 189, 166); border-color: black; color:                black; margin: 10px;">Hesabım Var<br>Giriş Yap</button>
+         </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+  </form>
+</div>
+
+<script>
+  function sign_in() {
       window.location.href = "sign_in.php";
     }
-    function iletisim() {
-      window.location.href = "iletisim.php";
-    }
-
-
-  </script>
-
+    function mainPage(){
+       window.location.href = ".php";                                
+   } 
+  function redirectToKayit() {
+    window.location.href = "Kayit.php";
+  }
+  
+</script>
 
    <br><br>
   <footer class="footer-32892 pb-0">
@@ -208,7 +253,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </ul>
     <div class="site-logo-wrap ml-auto">
     
-    <a href="#" class="site-logo">
+    <a href="index.php" class="site-logo">
     Kalem Dostları 
     </a>
     </div>
@@ -218,6 +263,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </div>
     </div>
     </footer>
+
 
 
 

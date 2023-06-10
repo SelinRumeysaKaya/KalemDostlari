@@ -1,5 +1,13 @@
 # KalemDostlari
 
+ Sizlere Yazılım Mühendisliği dersi kapsamında yürütmüş olduğumuz Kalem Dostları Projemizin tanıtımını gerçekleştirmek istiyorum.
+Kalem dostları, aylar öncesinde yaşamış olduğumuz deprem felaketi gibi birçok afet durumunda öğrencilerin ihtiyaçlarını karşılayacak ve onlara destek olma noktasında en hızlı şekilde yardım sağlayacak bir web sitesidir.
+Öğrenciler web sitesi aracılığıyla iş, staj, mentörlük ve elektronik eşya desteği gibi birçok konuda firmalarla ve bağışçılarla hızlı bir şekilde iletişim kurup destek alabileceklerdir.
+
+Projemizi incelemek ve geri dönüşlerinizi belirtmek isterseniz aşağıda bulunan github adresinden inceleyebilirsiniz.
+<br><br>[PROJE TANITIM DEMO -1 ](https://www.youtube.com/watch?v=CJY_IuMW8mw&t=14s)<br><br><br>
+[PROJE TANITIM SON  ](https://www.youtube.com/watch?v=fIQah5iDQCI)<br><br>
+
 Merhaba,
 
 Sizlerle KalemDostlari adlı girişimimizin ürünlerinin tanıtımını ve pazarlamasını içeren bir katalog paylaşmak istiyorum. Bu katalogda, ürünlerimizin detaylı bilgileri ve özellikleri yer almaktadır.

@@ -5,6 +5,7 @@ include_once "connection.php";
 <html>
 
 <head>
+ 
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
@@ -19,19 +20,123 @@ include_once "connection.php";
 
   <style>
     .navbar {
-      background-color: rgb(221, 199, 177);
+      background-color:rgb(221, 199, 177);
     }
-
     .kalem-dostlari {
       height: 50vh;
       padding-left: 20px;
     }
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'helvetica', sans-serif;
+    text-align: center;
+    background-color: white;
+    background-image: url("https://r.resimlink.com/bxnO4.png");
+
+    
+      
+}
+
+header {
+    position: relative;
+    width: 100%;
+    left: 0;
+    background: #D4D4D4;
+    height: 150px;
+    top: 0;
+}
+
+header h2 {
+    position:absolute;
+    color: rgb(150, 11, 57);
+    left: 0;
+    right:1400px;
+    margin: auto;
+    top: 40px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+header h3 {
+    position:absolute;
+    color: rgb(10, 26, 10);
+    left:1500px;
+    right: 0;
+    margin: auto;
+    top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+}
+
+input[type="text"],
+input[type="password"]{
+    width: 60%;
+    margin: 0px;
+    height: 50px;
+    background: #D4D4D4;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+}
+::placeholder {
+    font: 25px;
+    text-align: center;
+
+}
+
+.sub {
+    height: 40px;
+    width: 35%;
+    border: none;
+    border-radius: 25px;
+    box-sizing:border-box;
+    font-size: 1px;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+    margin: 15px;
+}
+    .buyutulan-buton {
+  font-size: 30px;
+}
+    .yer-degistirilecek-buton {
+  position: relative;
+  top: 10px;
+  left: 50px;
+  padding: 0;
+  margin: 0;
+  font-family: 'helvetica', sans-serif;
+  text-align: center;
+}
+    .yer-degistirilecek-butonn {
+  position: relative;
+  top: 5px;
+  padding: 0;
+  margin: 0;
+  font-family: 'helvetica', sans-serif;
+  text-align: center;
+  left: 50px;
+}
+    .yer-degistirilecek-butonnn {
+  position: relative;
+  top: 250px;
+  left: 100px;
+  padding: 0;
+  margin: 0;
+  font-family: 'helvetica', sans-serif;
+  text-align: center;
+}
   </style>
 </head>
 
-<body style="background-color: rgb(221, 199, 177)">
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body style="background-color: rgb(221, 199, 177)"  >
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
           height="150"></a>
@@ -42,7 +147,7 @@ include_once "connection.php";
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -61,10 +166,10 @@ include_once "connection.php";
             <a class="nav-link" href="hakkimizde.php">Hakkımızda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="nasilCalisir.php">Nasıl Çalışır?</a>
+            <a class="nav-link" href="nasılCalısır.php">Nasıl Çalışır?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="basvurularim.php">Başvurularım</a>
+            <a class="nav-link" href="Basvurularım.php">Başvurularım</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="iletisim.php">İletişim</a>
@@ -79,10 +184,19 @@ include_once "connection.php";
                   <i class="fa fa-search"></i>
                   <button class="btn btn-outline-success" type="submit"><svg viewBox="0 0 512 512" width="30"
                       title="search">
-                      <path
-                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                    </svg>
-                  </button>
+                      <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg></button>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,8 +215,10 @@ include_once "connection.php";
                 <path
                   d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z" />
               </svg>
-            </a>
-          </button>
+            </a> </button>
+
+
+          
 
 
         </form>
@@ -110,64 +226,9 @@ include_once "connection.php";
     </div>
   </nav>
 
-
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://i.ibb.co/GdHrT3z/Black-Modern-Website-Desktop-Prototype.png" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h2 style="color: black;">Elektronik Eşya Desteği</h2>
-          <p style=" color: black;">Elektronik Eşya Desteği sayfası, Kalem Dostları web sitesinde destek almak isteyen
-            öğrencilerin ihtiyaçlarına uygun eşyaların talep edilmesine olanak sağlar...</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.ibb.co/z6fj475/Black-Modern-Website-Desktop-Prototype-2-1.png" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h2 style="color: black;">Burs Destiği</h2>
-          <p style="color: black;"> depremzedelerin eğitim hayatına devam etmelerine destek olmak amacıyla
-            kurulmuş bir web sitesidir .. </p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.ibb.co/kMB3SM3/Black-Modern-Website-Desktop-Prototype-3-1.png" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h2 style="color: black;">İs/Staj Destiği</h2>
-          <p style="color: black;">depremzedelere iş veya staj fırsatı sağlanacak</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://i.ibb.co/MD4K3M9/Black-Modern-Website-Desktop-Prototype-1-1.png" class="d-block w-100">
-        <div class="carousel-caption d-none d-md-block">
-          <h2 style="color: black;">Mentorluk Desteği </h2>
-          <p style="color: black;"> Mentorluk desteiği bir kaç insanın hayatını normal donuşturabilir </p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-
-
-
-
-
-
+  
+  
+  
 
   <!-- Bootstrap JS ve jQuery -->
   <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
@@ -175,32 +236,85 @@ include_once "connection.php";
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+ <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <div class="row">
+  <h1 style="margin: 20px; background-color: ">Öğrenci Kayıt Ol</h1>
 
 
 
+    <form action="stu_sign_up_do.php" method="POST" class="form-control" style="margin:10px">
+        <div class="row justify-content-center align-items-center" style="margin:10px">
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="name" placeholder="İsim" class="form-control">
+        </div>
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="surname" placeholder="Soy İsim" class="form-control">
+        </div>
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="age" placeholder="Yaşınızı Giriniz" class="form-control">
+        </div>
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="departman" placeholder="Departman Giriniz" class="form-control">
+        </div>
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="school" placeholder="Okul Giriniz" class="form-control">
+        </div>
+    
+        <div class="col-md-6" style="margin:10px">
+            <input type="text" name="classLevel" placeholder="Sınıf Giriniz" class="form-control">
+        </div>
+    
+        <div class="col-md-6"style="margin:10px">
+            <input type="text" name="username" placeholder="Kullanıcı Adı Giriniz" class="form-control">
+        </div>
+    
+        <div class="col-md-6"style="margin:10px">
+            <input type="password" name="passwords" placeholder="Şifre Giriniz" class="form-control">
+        </div>
+        
+    
+        </div>  
+        
 
+        
+        <button  class=" rounded-pill  rounded border border-dark shadow-lg buyutulan-buton yer-degistirilecek-buton"type="submit" class="submit" value="submit" id="kullanicikaydet" name="submit" style="margin:10px; background-color:rgb(211,189,166); border-color: black; color: black;">Kayıt ol</button>   
 
+        <button type="submit" class="submit rounded border border-dark shadow-lg yer-degistirilecek-butonn" name="kayit" id="kayit" style="margin:10px; background-color:rgb(211,189,166); border-color: black; color: black;" onclick="redirectToKayit()">Geri Dön</button>
+        <button type="submit" class="submit rounded border border-dark shadow-lg yer-degistirilecek-butonn" btn btn-primary mx-2 rounded-pill " onclick=sign_in()
+        style="background-color:rgb(211,189,166); border-color: black; color: black;">Hesabım Var<br>Giriş Yap</button>
 
+        
+            
+ 
+</div>
+    </form>
 
-
-  <script>
-    function sign_up() {
-      window.location.href = "sign_up.php";
-    }
-
-    function iletisim() {
-      window.location.href = "iletisim.php";
-    }
-    function girisYap() {
+                
+</div>
+</div>
+</div>
+</div>
+  
+<script>
+  function girisYap() {
       window.location.href = "sign_in.php";
     }
-    function kayit() {
-      window.location.href = "Kayit.php";
+    function mainPage(){
+       window.location.href = "index.php";
+                                          
+   }
+  function redirectToKayit() {
+    window.location.href = "Kayit.php";
+  }
+</script>
 
-    }
-
-
-  </script>
 
 
   <br><br>
@@ -219,7 +333,7 @@ include_once "connection.php";
                     class="__cf_email__" data-cfemail="d3babdb5bc93b4beb2babffdb0bcbe">[email&#160;protected]</span></a>
               </li>
             </ul>
-            <form action="#" class="subscribe">
+            <form action="stu_sign_up_do.php" class="subscribe">
               <input type="text" class="form-control" placeholder="Enter your e-mail">
               <input type="submit" class="btn btn-submit" value="Send">
             </form>
@@ -260,7 +374,7 @@ include_once "connection.php";
               </ul>
               <div class="site-logo-wrap ml-auto">
 
-                <a href="index.php">
+                <a href="index.php" >
                   Kalem Dostları
                 </a>
               </div>

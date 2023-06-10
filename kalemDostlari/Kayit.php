@@ -1,8 +1,13 @@
+<?php
+include_once "connection.php";
+?>
 <!DOCTYPE HTML>
 <html>
 
+
 <head>
-  <meta charset="UTF-8">
+ 
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title> KALEM DOSTLARI </title>
   <!-- CSS only -->
@@ -16,18 +21,34 @@
 
   <style>
     .navbar {
-      background-color: rgb(221, 199, 177);
+      background-color:rgb(221, 199, 177);
     }
-
     .kalem-dostlari {
       height: 50vh;
       padding-left: 20px;
     }
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'helvetica', sans-serif;
+    text-align: center;
+    background-color: white;
+    background-image: url("https://r.resimlink.com/bxnO4.png");
+}
+    
+  .btn-primary:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+
+
   </style>
 </head>
 
-<body style="background-color: rgb(221, 199, 177)">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<body style="background-color: rgb(221, 199, 177)"  >
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="https://i.ibb.co/jgyVDPx/logo.png" alt="logo" width="150"
           height="150"></a>
@@ -38,7 +59,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
+            <a class="nav-link active" aria-current="page" href="#">Anasayfa</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -57,16 +78,16 @@
             <a class="nav-link" href="hakkimizde.php">Hakkımızda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="nasilCalisir.php">Nasıl Çalışır?</a>
+            <a class="nav-link" href="nasılCalısır.php">Nasıl Çalışır?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="basvurularim.php">Başvurularım</a>
+            <a class="nav-link" href="Basvurularım.php">Başvurularım</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="iletisim.php">İletişim</a>
           </li>
         </ul>
-        <form  action="firma_sign_up_do.php" class="d-flex">
+        <form class="d-flex">
           <div class="col-6 form-group">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Arama">
@@ -75,10 +96,19 @@
                   <i class="fa fa-search"></i>
                   <button class="btn btn-outline-success" type="submit"><svg viewBox="0 0 512 512" width="30"
                       title="search">
-                      <path
-                        d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
-                    </svg>
-                  </button>
+                      <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                    </svg></button>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,8 +127,10 @@
                 <path
                   d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z" />
               </svg>
-            </a>
-          </button>
+            </a> </button>
+
+
+          
 
 
         </form>
@@ -106,30 +138,7 @@
     </div>
   </nav>
 
-  <div class="container text-center">
-   <br><br><br> <h1> Hakkımızda   </h1>
-  </div><br><br><br>
-  <div class ="container-md"> 
-    <p class="" >
-      Vizyonumuz, her öğrencinin eğitimine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır. Bu yüzden, web sitemizde sadece staj eğitimi desteği değil, aynı zamanda burs ve ödüllere de yer veriyoruz. Bu sayede, öğrencilerin eğitimlerini tamamlamalarına ve geleceklerine daha güçlü bir şekilde adım atmalarına yardımcı oluyoruz.
-
-Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak için oluşturulmuş bir platformdur. Vizyonumuz ise öğrencilerin eğitimlerine destek olmak ve onların geleceklerine katkı sağlamak için elimizden geleni yapmaktır
-    </p>
-    
-  </div>
   
-  
-
-  
-
-
-
-
-
-
-
-
-
   <!-- Bootstrap JS ve jQuery -->
   <script src=" https://code.jquery.com/jquery-3.2.1.slim.min.js">
   </script>
@@ -138,21 +147,34 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
 
 
 
+          
+    <div class="col-sm-6 col-md-4 tableOuter container rounded-lg border border-dark shadow-lg mx-auto my-3" style="background-color:rgb(211,189,166); border-width: 2px; border-color: white; color: black;">
+  <div class="d-flex flex-column align-items-center justify-content-center" style="height: 100%;">
+      <button type="button" class="btn btn-primary m-2 rounded-pill" onclick="ogrenci_sign_up()" style="background-color:rgb(211,189,166); border-width: 2px; border-color: black; color: black;">Öğrenci Kayıt</button>
+      <button type="button" class="btn btn-primary m-2 rounded-pill" onclick="firma_sign_up()" style="background-color:rgb(211,189,166); border-width: 2px; border-color: black; color: black;">Firma Kayıt</button>
+      <button type="button" class="btn btn-primary m-2 rounded-pill" onclick="yonetici_sign_up() " style="background-color:rgb(211,189,166); border-width: 2px; border-color: black; color: black;">Yönetici Kayıt</button>
+  </div>
+</div>
 
-  <script>
-    function sign_up() {
-      window.location.href = "sign_up.php";
-    }
-    function sign_in() {
+<script>
+  function sign_in() {
       window.location.href = "sign_in.php";
     }
-    function iletisim() {
-      window.location.href = "iletisim.php";
-    }
-
-
-  </script>
-
+    function mainPage(){
+       window.location.href = ".php";                        
+   } 
+  function ogrenci_sign_up() {
+      window.location.href = "ogrenci_sign_up.php";
+  }
+  function firma_sign_up() {
+      window.location.href = "firma_sign_up.php";
+  }
+  function yonetici_sign_up() {
+      window.location.href = "yonetici_sign_up.php";
+  }
+  
+  
+</script>
 
    <br><br>
   <footer class="footer-32892 pb-0">
@@ -208,7 +230,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </ul>
     <div class="site-logo-wrap ml-auto">
     
-    <a href="#" class="site-logo">
+    <a href="index.php" class="site-logo">
     Kalem Dostları 
     </a>
     </div>
@@ -218,6 +240,7 @@ Sonuç olarak, web sitemiz demremzede öğrencilerin eğitimlerine destek olmak 
     </div>
     </div>
     </footer>
+
 
 
 
